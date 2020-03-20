@@ -1,0 +1,11 @@
+Capture 2:
+
+1). la commande dig @ns1.google.com -t TXT o-o.myaddr.l.google.com +short -4 permet de permet de diagnostiquer un problème de DNS.
+Elle va interroger des serveurs DNS et diagnostiquer les dysfonctionnements dans la résolution de nom, ici google.com.
+
+3). 4 transactions sont générées: la requête auprès du routeur donc une requête ARP et sa réponse venant d'un ordinateur qui a reçu la réponse. Puis une fois l'ordinateur a répondu au routeur, le routeur renvoie un message à cet ordinateur via le protocole DNS et reçoit une réponse.
+
+4). Via le broadcast, le routeur envoie la question "à qui est cette cette adresse IP?" "Who has 192.168.1.254?" 
+Puis le serveur 216.239.32.10 répond à PC1
+
+5). Pour chaque transaction, la question est posée à un routeur car on retrouve le protocole ARP. Le protocole ARP permet de déterminer l'adresse physique (ou MAC) d'un noeud à partir de son adresse IP.
